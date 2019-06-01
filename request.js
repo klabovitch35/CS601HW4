@@ -21,8 +21,7 @@
             if(httpRequest.status === 200) {
                 alert("successful request");
                 var response = JSON.parse(httpRequest.responseText);
-                document.write(response);
-                JSON.parse(response)
+                createTable(response);
             } else {
                 alert("failed request");
             }
@@ -30,7 +29,15 @@
     }
 
     function createTable() {
-
+        var table = document.getElementById('gable');
+        data.forEach(function(object) {
+        var tr = document.createElement('tr');
+        tr.innerHTML = '<td>' + object.school + '</td>' +
+            '<td>' + object.major + '</td>' +
+            '<td>' + object.type + '</td>' +
+            '<td>' + object.year + '</td>';
+        table.appendChild(tr);
+        });
     }
 
 }());
