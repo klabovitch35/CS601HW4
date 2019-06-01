@@ -1,6 +1,6 @@
 (function () {
     var httpRequest;
-    document.querySelector("button").onclick = function() { makeRequest('https://api.myjson.com/bins/i59fv');
+    document.querySelector("button").onclick = function() { makeRequest('https://cdn.jsdelivr.net/gh/klabovitch35/CS601HW4@master/source.json');
     };
     alert("it works");
     function makeRequest(url) {
