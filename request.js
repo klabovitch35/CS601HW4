@@ -15,8 +15,6 @@
     }
 
     function jsonContent() {
-        alert("in jsonContent");
-        alert("ready state: " + httpRequest.readyState);
         if(httpRequest.readyState === XMLHttpRequest.DONE) {
             if(httpRequest.status === 200) {
                 alert("successful request");
@@ -31,6 +29,7 @@
     function createTable() {
         var table = document.getElementById('gable');
         data.forEach(function(object) {
+        alert(object.major);
         var tr = document.createElement('tr');
         tr.innerHTML = '<td>' + object.school + '</td>' +
             '<td>' + object.major + '</td>' +
