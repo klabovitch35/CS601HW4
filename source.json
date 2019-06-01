@@ -1,0 +1,29 @@
+{
+    "college_degrees": [
+        {
+            "degree": {
+                "school": "Brandeis Unviersity",
+                "major": "Politics",
+                "type": "B.A.",
+                "year": "2017" 
+            }
+        },
+        {
+            "degree": {
+                "school": "Brandeis Unviersity",
+                "major": "Business",
+                "type": "B.A.",
+                "year": "2017" 
+            }
+        },
+        {
+            "degree": {
+                "school": "Boston University Metropolitan College",
+                "major": "Software Development",
+                "type": "M.S.",
+                "year": "2022" 
+            }
+        }
+
+    ]
+}
