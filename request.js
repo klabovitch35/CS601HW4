@@ -19,7 +19,10 @@
             if(httpRequest.status === 200) {
                 alert("successful request");
                 var response = JSON.parse(httpRequest.responseText);
-                createTable(response);
+                response.forEach(function(object){
+                    alert("record")
+
+                });
             } else {
                 alert("failed request");
             }
