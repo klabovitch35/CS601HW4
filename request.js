@@ -1,4 +1,5 @@
 (function () {
+    alert("proof you changed");
     var httpRequest;
     document.querySelector("button").onclick = function() { makeRequest('https://cdn.jsdelivr.net/gh/klabovitch35/CS601HW4@master/source.json');
     };
