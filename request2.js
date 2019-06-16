@@ -5,7 +5,7 @@
     function makeRequest(url) {
         httpRequest = new XMLHttpRequest();
         if(!httpRequest) {
-            alert('Failed to create HTTPRequest');
+            document.getElementById('container').innerHTML = "Invalid Request";
             return false;
         }
         httpRequest.onreadystatechange = jsonContent;
@@ -17,20 +17,20 @@
     function jsonContent() {
         if(httpRequest.readyState === XMLHttpRequest.DONE) {
             if(httpRequest.status === 200) {
-                alert("successful request");
                 var data = JSON.parse(httpRequest.responseText);
                 document.getElementById('container').innerHTML = createTable(data, '');
             } else {
-                alert("failed request");
+                document.getElementById('container').innerHTML = "Failed to get Data";
             }
         }
     }
 
     function createTable(data, classes) {
-        var row = data.college_degrees.degree;
-        // var cols = Object.keys(row);
+        //take individual rows and render their information in column cells
+        var row = data.college_degrees.degree;  
         var headerRow = '';
         var bodyRows = '';
+        //create table headers
         headerRow += '<th>' + 'School' + '</th>';
         headerRow += '<th>' + 'Major' + '</th>';
         headerRow += '<th>' + 'Type' + '</th>';
@@ -38,7 +38,7 @@
 
         data.college_degrees.map(function(row) {
             bodyRows += '<tr>';
-            // To do: Loop over object properties and create cells
+            // Loop over object properties and create cells
             bodyRows += '<td>' + row.degree.school + '</td>';
             bodyRows += '<td>' + row.degree.major + '</td>';
             bodyRows += '<td>' + row.degree.type + '</td>';
